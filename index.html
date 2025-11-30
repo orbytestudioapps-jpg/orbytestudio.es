@@ -15,16 +15,17 @@
             overflow-x: hidden;
         }
 
+        /* HERO centrado correctamente en móvil */
         .hero {
-            background-image: url('banner.jpg');
-            background-size: cover;
-            background-position: center;
             width: 100%;
-            height: 70vh;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            padding-bottom: 40px;
+            position: relative;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
         }
 
         .section {
@@ -56,12 +57,14 @@
         }
     </style>
 </head>
+
 <body>
 
-    <!-- HERO SIN TEXTO SUPERPUESTO -->
-    <div class="hero"></div>
+    <!-- HERO usando una imagen directa, sin CSS que recorte -->
+    <div class="hero">
+        <img src="banner.jpg" alt="Orbyte Studio Banner">
+    </div>
 
-    <!-- RECETARIO PRO -->
     <div class="section">
         <h2 style="font-size: 40px; margin-bottom: 20px;">Recetario PRO</h2>
         <p style="font-size: 20px; max-width: 800px; margin: auto; opacity: 0.85;">
@@ -75,7 +78,6 @@
         </a>
     </div>
 
-    <!-- FOOTER -->
     <div class="footer">
         © 2025 Orbyte Studio · Todos los derechos reservados.
     </div>
